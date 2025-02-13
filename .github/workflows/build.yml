@@ -25,6 +25,8 @@ jobs:
         uses: openwrt/gh-action-sdk@main
         env:
           ARCH: ${{ matrix.arch }}-openwrt-23.05
+          FEEDNAME: packages_ci
+          PACKAGES: luci-app-shadowsocks-libev
           NO_REFRESH_CHECK: true
 
       - name: Upload artifacts
